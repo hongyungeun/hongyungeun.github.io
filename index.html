@@ -3,11 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>portfolio</title>
+<!-- css -->
+<link rel="stylesheet" href="./css/styel.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<!-- icon : unicons, xeicon -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<!-- js -->
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./js/script.js"></script>
+<title>PORTFOLIO</title>
 </head>
-<body>
+<body class="bgu">
+    <header class="header" id="header">
+        <div class="header-inner flex">
+            <a href="#" id="logo">
+                홍윤근
+            </a>
+            <div class="nav__container">
+                <ul class="nav__list flex">
+                    <li class="nav__item">
+                        <a href="#" data-link="#home" class="nav__link">
+                            <i class="uil uil-estate nav__icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" data-link="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i>About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" data-link="#skills" class="nav__link">
+                            <i class="uil uil-file nav__icon"></i>
+                            Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" data-link="#services" class="nav__link">
+                            <i class="uil uil-briefcase-alt nav__icon"></i>
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" data-link="#portfolio" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i>
+                            Portfolio
+                        </a>
+                    </li>
+                    <i class="uil uil-times nav__close" id="navClose"></i>
+                </ul>
+            </div>
+            <div class="nav__btns flex">
+                <i class="uil uil-sun change-theme" id="buttonLight"></i>
+                <i class="uil uil-moon change-theme" id="buttonDark"></i>
+                <i class="uil uil-apps" id="navToggle"></i>
+            </div>
+        </div>
+    </header>
 
-    <h1>홍윤근 포트폴리오 사이트</h1>
+    <!-- ========================home section========================= -->
+    <section class="home">
+        <table></table>
+        <div class="home-container">
+            <p class="home-title">PORT</p><div class="home-box"><img src="./img/포폴-고양이.png" alt=""></div><p class="home-title">FOLIO</p>
+        </div>
+    </section>
+
+    <!-- ======================about section=====================  -->
+    <section class="about inner">
+        <div class="section__title--wrap">
+            <div class="section__title__intro">
+                <h1 class="section__title">About Me.</h1>
+                <p class="">Name 홍윤근</p>
+                <p>Age 28</p>
+                <p>Birth 1994.02.19</p>
+            </div>
+            <div class="section__title__intro__second">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing <br> elit. Velit vel nesciunt minima iusto enim itaque impedit exercitationem <br> hic recusandae, beatae esse saepe, voluptas aut maiores</p>
+                <a download="이력서_홍윤근.pdf" href="./pdf/이력서.pdf" class="download button">이력서 다운로드</a>
+            </div>
+        </div>
+    </section>
+
+<!-- =============history============= -->
+    <section class="history inner" id="history">
+            <div class="section__title--wrap">
+                <h1 class="section__title">History</h1>
+                <h3 class="section__subtitle">My History</h3>
+            </div>
+            <div class="history__tabs">
+                <a href="#" class="history__tab active">
+                    <i class="uil uil-graduation-cap"></i>
+                    Education
+                </a>
+                
+            </div>
+<!-- ====================================== history content 1 ====================================== -->
+        <div class="history__content">
+            <div class="history__item">
+                <div class="history__data">
+                    <h3 class="title">신라공업 고등학교</h3>
+                    <span class="subtitle">졸업</span>
+                    <div class="calendar">2013년 2월</div>
+                </div>
+                <div class="history__divider">
+                    <div class="history__circle"></div>
+                    <div class="history__line"></div>
+                </div>
+                <div class="history__blank"></div>
+            </div>
+            <div class="history__item">
+                <div class="history__blank"></div>
+                <div class="history__divider">
+                    <div class="history__circle"></div>
+                    <div class="history__line"></div>
+                </div>
+                <div class="history__data">
+                    <h3 class="title">대구대학교</h3>
+                    <span class="subtitle">졸업</span>
+                    <div class="calendar">2021년 2월</div>
+                </div>
+            </div>
+            <div class="history__item">
+                <div class="history__data">
+                    <h3 class="title">그리아트 디자인학원</h3>
+                    <span class="subtitle">입학</span>
+                    <div class="calendar">2021년 2월</div>
+                </div>
+                <div class="history__divider">
+                    <div class="history__circle"></div>
+                    <div class="history__line"></div>
+                </div>
+                <div class="history__blank"></div>
+            </div>
+            <div class="history__item">
+                <div class="history__blank"></div>
+                <div class="history__divider">
+                    <div class="history__circle"></div>
+                    <!-- <div class="history__line"></div> -->
+                </div>
+                <div class="history__data">
+                    <h3 class="title">그린아트 디자인학원</h3>
+                    <span class="subtitle">수료</span>
+                    <div class="calendar">2021년 7월</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
