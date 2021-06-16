@@ -6,23 +6,23 @@
 :root {
     
     /* ----------------------- colors ----------------------- */
-    --hue-color: 230;
-    --primary-color: hsl(var(--hue-color), 69%, 61%);
-    --primary-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --hue-color: #2C5F2D;
+    --primary-color: var(--hue-color);
+    --primary-color-lighter: var(--hue-color);
 
-    --black-color: hsl(var(--hue-color), 8%, 15%);
-    --gray-color: hsl(var(--hue-color), 8%, 45%);
+    --black-color: #222;
+    --gray-color: #999;
     --white-color: #FFF;
-    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --body-color: #fbfbfe;
 
     /*------------------ typo ---------------------*/
     --body-font: 'Noto Sans KR', sans-serif;
-    --main-font-size: 5rem;
+    --main-font-size: 6rem;
     --big-font-size: 3rem;
     --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
+    --h2-font-size: 1.6rem;
+    --h3-font-size: 1.4rem;
+    --normal-font-size: 1.3rem;
     --small-font-size: .813rem;
     
     /* ----------------------- font-weight ----------------------- */
@@ -203,9 +203,27 @@ button {
     color: var(--black-color);
     font-size: var(--main-font-size);
     height: 100vh;
+    position: relative;
 }
 .home-container {
     padding-top: 300px;
+}
+.square1 {
+    /* border: 3px solid var(--primary-color);
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 30%;
+    left: 30%; */
+}
+.square2 {
+    /* border: 3px solid var(--primary-color);
+    background: var(--primary-color);
+    width: 10px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    right: 20%; */
 }
 .home-title {
     vertical-align: top;
