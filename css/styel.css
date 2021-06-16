@@ -267,8 +267,21 @@ button {
     margin-left: 30px;
     vertical-align: top;
 }
+.about__info--wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    margin: 30px 0;
+}
+.about__info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 .download {
-    margin: 15px;
+    margin: 10px 0 20px 0;
 }
 
 /* ==================history================== */
@@ -317,4 +330,182 @@ button {
 }
 .history__blank {
     flex: 3;
+}
+
+/* -----------------skills----------------*/
+.skills__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills__item {
+    display: flex;
+    width: 50%;
+    flex-shrink: 0;
+    flex-direction: column;
+    margin-bottom: var(--mb-1-5);
+    padding-right: var(--mb-1-5);
+}
+.skills__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--mb-1);
+    cursor: pointer;
+}
+.skills__title {
+    display: flex;
+    align-items: center;
+}
+.skills__title i {
+    margin-right: var(--mb-1);
+}
+.skill__icon,
+.skill__icon--arrow {
+    font-size: var(--h1-font-size);
+    color: var(--primary-color);
+    transition: .3s;
+}
+.skill__icon--arrow.active {
+    transform: rotate(180deg);
+}
+.skill__progress {
+    padding-left: 3.2rem;
+    margin-bottom: var(--mb-1);
+}
+.skill__titles {
+    display: flex;
+    justify-content: space-between;
+}
+.skill__titles h3 {
+    font-weight: var(--small-font-size);
+}
+
+.skill__data {
+    display: none;
+}
+
+.skill__bar {
+    height: 8px;
+    border-radius: .5rem;
+    overflow: hidden;
+    background: var(--primary-color-lighter);
+}
+.skill_percent_90 {
+    display: block;
+    width: 90%;
+    height: 100%;
+    background: var(--primary-color);
+}
+.skill_percent_70 {
+    display: block;
+    width: 70%;
+    height: 100%;
+    background: var(--primary-color);
+}
+.skill_percent_60 {
+    display: block;
+    width: 60%;
+    height: 100%;
+    background: var(--primary-color);
+}
+.skill_percent_50 {
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+/* ========================= Tablet ========================= */
+@media (max-width: 768px){
+
+
+    :root {
+        --h1-font-size: 1.5rem;
+        --h2-font-size: 1.25rem;
+        --h3-font-size: 1.125rem;
+        --big-font-size: 2rem;
+        --normal-font-size: .938rem;
+        --small-font-size: .75rem;
+    }
+    .inner {
+        padding: 2rem 2rem;
+    }
+    .header {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--body-color);
+        box-shadow: 0 0 5px rgba(0,0,0,.5);
+        padding: 0 1rem;
+        z-index: var(--z-fixed);
+    }
+    .home.inner {
+        padding: 0 4rem;
+    }
+    .nav__container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+        width: 100%;
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 0 5px rgba(0,0,0,.5);
+        transition: .3s;
+        border-radius: 1.5rem 1.5rem 0 0;
+    }
+    .nav__container.visible {
+        transform: translateY(0);
+    }
+    .nav__list {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .nav__item {
+        width: 33.3333%;
+        margin-right: 0;
+        text-align: center;
+        padding: 1rem;
+    }
+    .nav__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav__icon {
+        margin-left: 0;
+        display: block;
+    }
+    #buttonLight {
+        margin-right: 1rem;
+    }
+    #buttonDark {
+        margin-right: 1rem;
+    }
+    .nav__close {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        bottom: 2rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    #navToggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+}
+
+/* ========================= Mobile ========================= */
+@media (max-width: 568px){
+
+    /* ====================== Skills ===================== */
+    .skills__list {
+        flex-direction: column;
+    }
+    .skills__item {
+        width: auto;
+    }
+
 }
