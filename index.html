@@ -12,6 +12,13 @@
 <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 <!-- js -->
 <script src="./js/jquery-3.6.0.min.js"></script>
+<!-- scroll magic -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+<!-- gsap.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+<!-- slick -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="./js/script.js"></script>
 <title>PORTFOLIO</title>
@@ -22,14 +29,11 @@
     <section class="home">
         <table></table>
         <div class="home-container">
-            <div class="square1"></div>
-            <div class="square2"></div>
-            <div class="circle1"></div>
-            <div class="circle1"></div>
-            <p class="home-title">PORT</p><div class="home-box"></div><p class="home-title">FOLIO</p>
+            <p class="home-title">Publisher</p><div class="home-box"></div><p class="home-title">Designer</p>
+            <p class="home-sub-title">hongyungeun &nbsp;&nbsp;&nbsp;&nbsp;PORTFOLIO</p>
         </div>
     </section>
-
+    <!-- <section class="home-end"></section> -->
     <!-- ======================about section=====================  -->
     <section class="about">
         <div class="header" id="header">
@@ -50,21 +54,15 @@
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" data-link="#skills" class="nav__link">
-                                <i class="uil uil-file nav__icon"></i>
-                                Skills
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" data-link="#services" class="nav__link">
-                                <i class="uil uil-briefcase-alt nav__icon"></i>
-                                Services
-                            </a>
-                        </li>
-                        <li class="nav__item">
                             <a href="#" data-link="#portfolio" class="nav__link">
                                 <i class="uil uil-scenery nav__icon"></i>
                                 Portfolio
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" data-link="#contact" class="nav__link">
+                                <i class="uil uil-file nav__icon"></i>
+                                Contact
                             </a>
                         </li>
                         <i class="uil uil-times nav__close" id="navClose"></i>
@@ -80,178 +78,135 @@
 
         <div class="section__title--wrap inner">
             <div class="section__title__intro">
-                <h1 class="section__title">About</h1>&nbsp;&nbsp; <h1 class="section__title primary__color">Me</h1>&nbsp; <div class="section__title__line"></div>
+                <!-- <h1 class="section__title">About</h1>&nbsp;&nbsp; <h1 class="section__title primary__color">Me</h1>&nbsp; <div class="section__title__line"></div> -->
                 <div class="section__title__sub">
-                    <h2>Profile</h2>
-                </div>
-                <div class="section__title__desc">
-                    <span class="primary__color margin-r">Name </span>&nbsp;&nbsp;&nbsp; <span>홍윤근</span> <br>
-                    <span class="primary__color margin-r">Age </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span> 28</span><br>
-                    <span class="primary__color margin-r">Birth </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span> 1994.02.19</span> <br>
-                </div>
                 <div class="section__title__intro__second ">
+                    <h2 class="text-align-l">안녕하세요!</h2>
                 <p class="text-align-l">모든일에 책임감을 가지고 최선을 다하는 <br> Web Designer & publisher 홍윤근 입니다</p>
-                    <div class="about__info--wrap">
-                        <div class="about__info">
-                            <div class="">
-                                <h2 class="about__info--title stoudyCount">760</h2>
-                                <span class="about__info--name">학습 시간</span>
+                
+                </div>
+                </div>
+            </div>
+            <img src="./img/Canvas-Board.jpg" alt="" class="intro-img">
+            <section class="skills" id="skills">
+                <ul class="skills__list">
+                    <li class="skills__item">
+                        <div class="skills__header">
+                            <div class="skills__title">
+                                <i class="uil uil-brackets-curly skill__icon"></i>
+                                <div class="skills__desc">
+                                    <h2>Web Publisher</h2>
+                                </div>
                             </div>
-                            <div class="">
-                                <h2 class="about__info--title pracCount">100</h2>
-                                <span class="about__info--name">실습 시간</span>
-                            </div>
-                            <div>
-                                <h2 class="about__info--title projectCount">05</h2>
-                                <span class="about__info--name">프로젝트</span>
-                            </div>
+                            <i class="uil uil-angle-down skill__icon--arrow"></i>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section__title__intro__second">
-                <img src="./img/history.png" alt="" class="history-img">
-                <div class="history__main__desc">
-                    <div class="history__desc1">
-                        <p>2013.02</p>
-                        <p>신라공업고등학교</p>
-                        <p>졸업</p></div>
-                    <div class="history__desc2">
-                        <p>2021.02</p>
-                        <p>대구대학교</p>
-                        <p>졸업</p>
-                    </div>
-                    <div class="history__desc3">
-                        <p>2021.07</p>
-                        <p>그린컴퓨터 디자인 학원</p>
-                        <p>수료</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="resume-download">
-            <a download ="이력서_홍윤근.pdf" href="./pdf/이력서.pdf" class="download button">이력서 다운로드</a>
+                        <ul class="skill__data">
+                            <li class="skill__progress">
+                                <div class="skill__titles">
+                                    <h3>HTML</h3>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <span class="skill_percent_90">
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="skill__progress">
+                                <div class="skill__titles">
+                                    <h3>CSS</h3>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <span class="skill_percent_90">
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="skill__progress">
+                                <div class="skill__titles">
+                                    <h3>Javascript</h3>
+                                    <span>60%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <span class="skill_percent_60">
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="skills__item">
+                        <div class="skills__header">
+                            <div class="skills__title">
+                                <i class="uil uil-swatchbook skill__icon"></i>
+                                <div class="skills__desc">
+                                    <h2>Designer</h2>
+                                </div>
+                            </div>
+                            <i class="uil uil-angle-down skill__icon--arrow"></i>
+                        </div>
+                        <ul class="skill__data">
+                            <li class="skill__progress">
+                                <div class="skill__titles">
+                                    <h3>Photoshop</h3>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <span class="skill_percent_70">
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="skill__progress">
+                                <div class="skill__titles">
+                                    <h3>Illustrator</h3>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <span class="skill_percent_70">
+                                    </span>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li class="skills__item">
+                        <div class="skills__header">
+                            <div class="skills__title">
+                                <i class="uil uil-server-network skill__icon"></i>
+                                <div class="skills__desc">
+                                    <h2>Etc skills</h2>
+                                </div>
+                            </div>
+                            <i class="uil uil-angle-down skill__icon--arrow"></i>
+                        </div>
+                        <ul class="skill__data">
+                            <li class="skill__progress">
+                                <div class="skill__titles">
+                                    <h3>Git Hub</h3>
+                                    <span>60%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <span class="skill_percent_50">
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="skill__progress">
+                                <div class="skill__titles">
+                                    <h3>slack</h3>
+                                    <span>--</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <span class="skill_percent_70">
+                                    </span>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </section>
         </div>
+        
 
     <!------------------- skills --------------------->
-    <section class="skills inner" id="skills">
-        <div class="section__title--wrap">
-            <h1 class="section__title">Skills</h1>
-            <h3 class="section__subtitle">My technical level</h3>
-        </div>
-        <ul class="skills__list">
-            <li class="skills__item">
-                <div class="skills__header">
-                    <div class="skills__title">
-                        <i class="uil uil-brackets-curly skill__icon"></i>
-                        <div class="skills__desc">
-                            <h2>Web Publisher</h2>
-                        </div>
-                    </div>
-                    <i class="uil uil-angle-down skill__icon--arrow"></i>
-                </div>
-                <ul class="skill__data">
-                    <li class="skill__progress">
-                        <div class="skill__titles">
-                            <h3>HTML</h3>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <span class="skill_percent_90">
-                            </span>
-                        </div>
-                    </li>
-                    <li class="skill__progress">
-                        <div class="skill__titles">
-                            <h3>CSS</h3>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <span class="skill_percent_90">
-                            </span>
-                        </div>
-                    </li>
-                    <li class="skill__progress">
-                        <div class="skill__titles">
-                            <h3>Javascript</h3>
-                            <span>60%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <span class="skill_percent_60">
-                            </span>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <li class="skills__item">
-                <div class="skills__header">
-                    <div class="skills__title">
-                        <i class="uil uil-swatchbook skill__icon"></i>
-                        <div class="skills__desc">
-                            <h2>Designer</h2>
-                        </div>
-                    </div>
-                    <i class="uil uil-angle-down skill__icon--arrow"></i>
-                </div>
-                <ul class="skill__data">
-                    <li class="skill__progress">
-                        <div class="skill__titles">
-                            <h3>Photoshop</h3>
-                            <span>70%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <span class="skill_percent_70">
-                            </span>
-                        </div>
-                    </li>
-                    <li class="skill__progress">
-                        <div class="skill__titles">
-                            <h3>Illustrator</h3>
-                            <span>70%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <span class="skill_percent_70">
-                            </span>
-                        </div>
-                    </li>
-                    
-                </ul>
-            </li>
-            <li class="skills__item">
-                <div class="skills__header">
-                    <div class="skills__title">
-                        <i class="uil uil-server-network skill__icon"></i>
-                        <div class="skills__desc">
-                            <h2>Etc skills</h2>
-                        </div>
-                    </div>
-                    <i class="uil uil-angle-down skill__icon--arrow"></i>
-                </div>
-                <ul class="skill__data">
-                    <li class="skill__progress">
-                        <div class="skill__titles">
-                            <h3>Git Hub</h3>
-                            <span>50%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <span class="skill_percent_50">
-                            </span>
-                        </div>
-                    </li>
-                    <li class="skill__progress">
-                        <div class="skill__titles">
-                            <h3>slack</h3>
-                            <span>70%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <span class="skill_percent_70">
-                            </span>
-                        </div>
-                    </li>
-                    
-                </ul>
-            </li>
-        </ul>
-    </section>
+    
 </body>
 </html>

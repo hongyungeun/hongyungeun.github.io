@@ -1,7 +1,12 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-
+@font-face {
+    font-family: 'Wild';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_11@1.0/Wild.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 :root {
     
@@ -223,50 +228,42 @@ button {
     text-align: center;
     color: var(--black-color);
     font-size: var(--main-font-size);
-    height: 2000px;
+    height: 3000px;
     position: relative;
-    background: url(/img/main-banner2.png)no-repeat fixed;
+    
 }
 .home-container {
     padding-top: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     
 }
 .home-title {
     vertical-align: top;
     margin-top: 50px;
 }
+.home-sub-title {
+    font-size: var(--main-font-size);
+    font-family: 'Wild';
+    opacity: 0;
+    margin-top: -100px;
+}
 .home-box {
     width: 500px;
     height: 200px;
     border: 1px solid #000;
     display: inline-block;
-    animation: zero 1.3s 1s linear forwards;
 }
-@keyframes zero {
-    0% {
-        width: 500px;
-    }
-    30% {
-        width: 350px;
-    }
-    60% {
-        width: 200px;
-    }
-    80% {
-        width: 100px;
-    }
-    90% {
-        width: 30px;
-    }
-    100% {
-        width: 0;
-        opacity: 0;
-        visibility: hidden;
-    }
-}
+
 .home-title {
     display: inline-block;
 }
+/* .home-end {
+    width: 100%;
+    height: 150px;
+} */
 
 /* ========================about========================= */
 .about {
@@ -316,7 +313,7 @@ button {
 
 .section__title__intro__second {
     display: inline-block;
-    width: 600px;
+    width: 800px;
     text-align-last: center;
     position: relative;
     vertical-align: top;
@@ -336,13 +333,13 @@ button {
     width: 400px;
     margin-left: 120px;
 }
-.resume-download {
-    
+.intro-img {
+    width: 400px;
+    margin-left: 300px;
 }
 .download {
     text-align: center;
-    margin: 0 auto;
-    /* margin-left: -500px; */
+    margin-top: 50px;
 }
 
 /* -----------------history--------------- */
@@ -363,14 +360,19 @@ button {
     font-weight: var(--font-semi-bold);
     z-index: var(--z-tooltip);
 }
+.history__desc1,
+.history__desc2,
+.history__desc3:hover {
+    color: var(--primary-color);
+}
 .history__desc1 {
     position: absolute;
-    top: 15%;
+    top: 12%;
     left: 16%;
 }
 .history__desc2 {
     position: absolute;
-    bottom: 5%;
+    top: 40%;
     left: 52%;
 }
 .history__desc3 {
@@ -379,6 +381,10 @@ button {
     right: 0%;
 }
 /* -----------------skills----------------*/
+.skills {
+    width: 800px;
+    margin-top:-150px;
+}
 .skills__list {
     display: flex;
     flex-wrap: wrap;
