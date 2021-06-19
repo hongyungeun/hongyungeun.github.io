@@ -5,12 +5,10 @@ $(function(){
     $('#buttonDark').click(function(){
         $(this).hide();
         $('body').addClass('dark-theme');
-        $('body').removeClass('bgu')
         $('#buttonLight').show();
     })
     $('#buttonLight').click(function(){
         $('body').removeClass('dark-theme');
-        $('body').addClass('bgu')
         $('#buttonDark').show();
         $(this).hide();
     })
@@ -55,7 +53,7 @@ $(function(){
 
     // 매개변수(누구, 시간, 어떻게)
     // 마지막 엘리먼트의 상태
-    var box = TweenMax.to('.home-box', 1,{
+    var box = TweenMax.to('.main-box', 1,{
         width: 0,
         autoAlpha: 0,/* opcity */
         
@@ -66,7 +64,7 @@ $(function(){
         /* 
             트리거를 발생시킬 엘리먼트 범위
          */
-        triggerElement: '.home',
+        triggerElement: '.main',
         /* 
             trigger의 위치 0~1
             y축
@@ -86,12 +84,12 @@ $(function(){
     .addTo(controller)
     
 
-    var title = TweenMax.to('.home-title', 1,{
+    var title = TweenMax.to('.main-title', 1,{
         autoAlpha: 0,/* opcity */
         
     })
     var scene2 = new ScrollMagic.Scene({
-        triggerElement: '.home',
+        triggerElement: '.main',
         triggerHook: 0,
         offset: 200,
         duration: "100%"
@@ -99,12 +97,12 @@ $(function(){
     .setTween(title)
     .addTo(controller)
     
-    var subTitle = TweenMax.to('.home-sub-title', 1,{
+    var subTitle = TweenMax.to('.main-sub-title', 1,{
         autoAlpha: 1,/* opcity */
         
     })
     var scene3 = new ScrollMagic.Scene({
-        triggerElement: '.home',
+        triggerElement: '.main',
         triggerHook: 0,
         offset: 600,
         duration: "150%"
@@ -112,12 +110,12 @@ $(function(){
     .setTween(subTitle)
     .addTo(controller)
     
-    var subTitle = TweenMax.to('.home-sub-title', 1,{
+    var subTitle = TweenMax.to('.main-sub-title', 1,{
         autoAlpha: 0,/* opcity */
         
     })
     var scene3 = new ScrollMagic.Scene({
-        triggerElement: '.home',
+        triggerElement: '.main',
         triggerHook: 0,
         offset: 600,
         duration: "240%"
@@ -125,4 +123,12 @@ $(function(){
     .setTween(subTitle)
     .addTo(controller)
     
+    /* ==================slick=================== */
+    $('.fade').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+    });
 })

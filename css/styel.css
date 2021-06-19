@@ -14,11 +14,12 @@
     --hue-color: #154415;
     --primary-color: var(--hue-color);
     --primary-color-lighter: #286428;
-
     --black-color: #222;
     --gray-color: #999;
     --white-color: #FFF;
     --body-color: #FFFEF8;
+    --main-color: #fbfbfe;
+    --hov-color: rgb(94, 100, 163);
 
     /*------------------ typo ---------------------*/
     --body-font: 'Noto Sans KR', sans-serif;
@@ -62,7 +63,7 @@ body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
-    color: var(--gray-color);
+    color: var(--black-color);
 }
 
 h1,h2,h3,h4 {
@@ -74,6 +75,7 @@ h1 {
 }
 h2 {
     font-size: var(--h2-font-size);
+    
 }
 h3 {
     font-size: var(--h3-font-size);
@@ -99,6 +101,7 @@ button {
 }
 .section__title {
     font-size: var(--h1-font-size);
+    display: inline-block;
 }
 .section__subtitle {
     font-size: var(--normal-font-size);
@@ -106,7 +109,6 @@ button {
     margin-bottom: var(--mb-3);
 }
 .button {
-    display: inline-block;
     background-color: var(--primary-color);
     color: #fff;
     padding: 1rem;
@@ -136,6 +138,14 @@ button {
     clear: both;
     display: block;
 }
+.main-bg {
+    background: var(--main-color);
+}
+/* ----------------------- dark-theme ----------------------- */
+body.dark-theme {
+    --black-color: rgb(255, 255, 255); /* 흰색으로 바뀝니다 */
+    --body-color: rgb(26, 29, 58); /* 어두운 색으로 바뀝니다 */
+}
 /* ========================= layout ========================= */
 .inner {
     min-width: 340px;
@@ -153,7 +163,7 @@ button {
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--body-color);
+    /* background: var(--main-color); */
     z-index: var(--z-fixed);
     box-shadow: 0 0 5px rgba(0,0,0,.2);
 }
@@ -182,7 +192,7 @@ button {
 .nav__item:hover,
 .nav__item.active
 {
-    color: var(--primary-color);
+    color: var(--hov-color);
 }
 .nav__btns {
     color: var(--black-color);
@@ -206,7 +216,7 @@ button {
     padding-top: 3px;
 }
 .change-theme:hover {
-    color: var(--primary-color);
+    color: var(--hov-color);
 }
 #buttonLight {
     display: none;
@@ -222,9 +232,9 @@ button {
     display: none;
 }
 
-/* ========================= home ========================= */
+/* ========================= main ========================= */
 
-.home {
+.main {
     text-align: center;
     color: var(--black-color);
     font-size: var(--main-font-size);
@@ -232,7 +242,7 @@ button {
     position: relative;
     
 }
-.home-container {
+.main-container {
     padding-top: 300px;
     position: fixed;
     top: 0;
@@ -240,67 +250,50 @@ button {
     right: 0;
     
 }
-.home-title {
+.main-title {
     vertical-align: top;
     margin-top: 50px;
+    display: inline-block;
 }
-.home-sub-title {
+.main-sub-title {
     font-size: var(--main-font-size);
     font-family: 'Wild';
     opacity: 0;
     margin-top: -100px;
 }
-.home-box {
+.main-box {
     width: 500px;
     height: 200px;
     border: 1px solid #000;
+    margin: 0 auto;
     display: inline-block;
 }
 
-.home-title {
-    display: inline-block;
-}
-/* .home-end {
-    width: 100%;
-    height: 150px;
-} */
 
-/* ========================about========================= */
-.about {
+
+/* ========================home========================= */
+.home {
     text-align-last: left;
     padding: 2rem;
-    color: #000;
     position: relative;
 }
 .section__title--wrap {
     margin-top: 100px;
 }
-.section__title__intro {
-    display: inline-block;
-    width: 500px;
-    position: relative;
-}
-.section__title__intro img {
-    width: 600px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+
 .section__title {
     margin-bottom: var(--mb-1);
-    display: inline-block;
 }
 .section__title__desc span{
-    display: inline-block;
     margin-bottom: var(--mb-1-5);
 }
 .section__title__line {
     width: 300px;
     height: 2px;
     background: var(--primary-color);
-    display: inline-block;
     vertical-align: top;
     margin-top: 30px;
+    display: inline-block;
 }
 .section__title__sub h2{
     margin: 30px 0;
@@ -312,13 +305,13 @@ button {
 }
 
 .section__title__intro__second {
-    display: inline-block;
     width: 800px;
     text-align-last: center;
     position: relative;
     vertical-align: top;
+    display: inline-block;
 }
-.about__info--wrap {
+.home__info--wrap {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -327,58 +320,73 @@ button {
     margin: 30px 0;
     
 }
-.about__info {
+.home__info {
     display: flex;
     justify-content: space-between;
     width: 400px;
     margin-left: 120px;
 }
+.home__img__box {
+    display: inline-block;
+}
 .intro-img {
     width: 400px;
-    margin-left: 300px;
 }
+
 .download {
     text-align: center;
     margin-top: 50px;
 }
 
+/* --------------- about ----------------- */
+
+.about{
+
+}
+.about__wrap {
+    margin-top: 50px;
+}
+.profile-img {
+    display: inline-block;
+    vertical-align: top;
+}
+.profile-img img {
+    width: 400px;
+    height: 400px;
+}
+
 /* -----------------history--------------- */
-.history__main__desc {
+.history-img {
+    display: inline-block;
+    margin-left: 100px;
+    position: relative;
+}
+.history-img p {
+    margin-top: 50px;
+}
+.history-img img {
+    width: 600px;
     
 }
-.history-img {
-    width: 700px;
-}
-.history__main__desc p {
-    text-align-last: center;
-}
-.history__desc1,
-.history__desc2,
-.history__desc3 {
+.history__img__desc1,
+.history__img__desc2,
+.history__img__desc3
+{
+    position: absolute;
     font-size: var(--small-font-size);
     text-align: center;
-    font-weight: var(--font-semi-bold);
-    z-index: var(--z-tooltip);
 }
-.history__desc1,
-.history__desc2,
-.history__desc3:hover {
-    color: var(--primary-color);
+.history__img__desc1 {
+    top: 5%;
+    left: 12%;
 }
-.history__desc1 {
-    position: absolute;
-    top: 12%;
-    left: 16%;
+.history__img__desc2 {
+    top: 32%;
+    left: 44%;
 }
-.history__desc2 {
-    position: absolute;
-    top: 40%;
-    left: 52%;
-}
-.history__desc3 {
-    position: absolute;
-    top: -10%;
-    right: 0%;
+.history__img__desc3 {
+    top: -7%;
+    right: 13%;
 }
 /* -----------------skills----------------*/
 .skills {
@@ -492,7 +500,7 @@ button {
         padding: 0 1rem;
         z-index: var(--z-fixed);
     }
-    .home.inner {
+    .main.inner {
         padding: 0 4rem;
     }
     .nav__container {
