@@ -84,9 +84,7 @@ $(function(){
     })
     .setTween(box)
     .addTo(controller)
-    .addIndicators({
-        name: '박스'
-    })
+    
 
     var title = TweenMax.to('.home-title', 1,{
         autoAlpha: 0,/* opcity */
@@ -100,9 +98,7 @@ $(function(){
     })
     .setTween(title)
     .addTo(controller)
-    .addIndicators({
-        name: '타이틀'
-    })
+    
     var subTitle = TweenMax.to('.home-sub-title', 1,{
         autoAlpha: 1,/* opcity */
         
@@ -115,9 +111,7 @@ $(function(){
     })
     .setTween(subTitle)
     .addTo(controller)
-    .addIndicators({
-        name: '서브타이틀오퍼1'
-    })
+    
     var subTitle = TweenMax.to('.home-sub-title', 1,{
         autoAlpha: 0,/* opcity */
         
@@ -130,7 +124,5 @@ $(function(){
     })
     .setTween(subTitle)
     .addTo(controller)
-    .addIndicators({
-        name: '서브타이틀오퍼0'
-    })
+    
 })
