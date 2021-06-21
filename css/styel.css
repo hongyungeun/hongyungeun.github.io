@@ -268,7 +268,9 @@ body.dark-theme {
     margin: 0 auto;
     display: inline-block;
 }
-
+.main-fixed {
+    position: fixed;
+}
 
 
 /* ========================home========================= */

@@ -12,7 +12,19 @@ $(function(){
         $('#buttonDark').show();
         $(this).hide();
     })
-
+    var $home = $('.home')
+    var mainDistance = $('.main').offset.top()
+    var $mainItem = $('.main-container')
+    $(window).scroll(function(){
+        var scrollTop = $(this).scrollTop()
+        if( scrollTop > mainDistance){
+            $mainItem.addClass('main-fixed')
+        }else if( scrollTop = $home){
+            $mainItem.removeClass('main-fixed')
+        }else {
+            $mainItem.removeClass('main-fixed')
+        }
+    })
     /* ================= navbar ===================== */
     var $navItem = $('.nav__item');
     $navItem.click(function(e){
@@ -30,18 +42,8 @@ $(function(){
     $('#navToggle, .nav__close').click(function(){
         $('.nav__container').toggleClass('visible');
     })
-    /* ================ about=============== */
-    $('.stoudyCount, .pracCount, .projectCount').each(function () {
-        $(this).prop('Counter',0).animate({
-                Counter: $(this).text()
-        }, {
-                duration: 3000,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-            }
-        });
-    });
+    
+    
     /* ================= skill tabs ================= */
     $('.skills__header').click(function(){
         $(this).children('.skill__icon--arrow').toggleClass('active');
@@ -106,6 +108,7 @@ $(function(){
         triggerHook: 0,
         offset: 600,
         duration: "150%"
+        
     })
     .setTween(subTitle)
     .addTo(controller)
